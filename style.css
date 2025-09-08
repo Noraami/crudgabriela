@@ -1,0 +1,139 @@
+html{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    height: 97vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.log{
+    padding: 30px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(241, 253, 255, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 7, 75, 0.55);
+    border-radius: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.background{
+    background: 
+        radial-gradient(
+            circle at calc(50% + var(--mouseX, 0%)) calc(50% + var(--mouseY, 0%)), 
+            rgb(164, 243, 255) 0%, 
+            rgba(0, 212, 255, 1) 10%, 
+            rgba(9, 20, 128, 1) 45%, 
+            rgba(2, 0, 36, 1) 70%
+        );
+    background-size: var(--size, 200%) var(--size, 200%);
+    background-position: center;
+    transition: background-position 0.3s ease;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.turma_background{
+    background-color: #1082df;
+    padding: 20px;
+}
+
+#h2t{
+    margin: 10px 0;
+    padding: 0;
+}
+
+.tbox{
+    padding: 20px 30px;
+    background-color: rgba(241, 253, 255, 0.884);
+    border-radius: 23px;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    border-radius: 5px;
+    border: 0px solid;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
+    height: 30px;
+    text-align: center;
+    background-color: rgba(241, 253, 255, 0.75);
+}
+
+.btn{
+    border-radius: 5px;
+    border: 0px solid;
+    height: 30px;
+    background-color: #00bfff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btnturma{
+    border-radius: 5px;
+    border: 0px solid;
+    height: 30px;
+    background-color: #1969d3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0px 10px;
+}
+
+.btn:hover{
+    background-color: #1082df;
+}
+
+input::placeholder{
+    text-align: center;
+}
+
+input:focus::placeholder{
+    font-size: 11px;
+    transition: font-size 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerturma{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#btnsair{
+    padding: 5px 10px;
+    font-size: 15px;
+    width: 70px;
+    background-color: rgb(238, 23, 23);
+}
+#btnsair:hover{
+    background-color: rgb(175, 0, 0);
+}
+
+hr{
+    border-color: #00000034;
+    margin: 0;
+    padding: 0;
+}
