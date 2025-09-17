@@ -33,41 +33,43 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Login</title>
 </head>
+
 <body class="background">
     <div class="container">
         <div class="log">
             <h2>Login - PROFESSOR</h2>
-    <form method="post">
-        <input type="email" id="email" name="email" placeholder="Email" class="box" required><br><br>
-        <input type="password" id="senha" name="senha" placeholder="Senha" class="box" required><br><br>
-        <button type="submit" name="login" class="btn">Entrar</button>
-        <?php if ($erro): ?>
-            <div class="erro"><?= htmlspecialchars($erro) ?></div>
-        <?php endif; ?>
-    </form>
+            <form method="post">
+                <input type="email" id="email" name="email" placeholder="Email" class="box" required><br><br>
+                <input type="password" id="senha" name="senha" placeholder="Senha" class="box" required><br><br>
+                <button type="submit" name="login" class="btn">Entrar</button>
+                <?php if ($erro): ?>
+                    <div class="erro"><?= htmlspecialchars($erro) ?></div>
+                <?php endif; ?>
+            </form>
         </div>
     </div>
     <script>
         const $bg = document.querySelector(".background");
         const mouseScale = 0.15;
-        
+
         // Set initial size
         $bg.style.setProperty("--size", "200%");
-        
+
         $bg.addEventListener("mousemove", e => {
             const rect = $bg.getBoundingClientRect();
             const x = ((e.clientX - rect.left) / rect.width * 100 - 50);
             const y = ((e.clientY - rect.top) / rect.height * 100 - 50);
-            
+
             $bg.style.setProperty("--mouseX", `${(x * mouseScale).toFixed(2)}%`);
             $bg.style.setProperty("--mouseY", `${(y * mouseScale).toFixed(2)}%`);
-            
+
         });
 
         $bg.addEventListener("mouseleave", () => {
@@ -78,4 +80,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         });
     </script>
 </body>
+
 </html>
